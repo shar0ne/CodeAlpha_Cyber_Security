@@ -1,0 +1,240 @@
+/* --- PALETTE CYBERPUNK ROSE & NOIR --- */
+:root {
+    --bg-dark: #050508;          /* Noir ultra profond */
+    --card-bg: #0d0d13;          /* Noir Obsidian */
+    --panel-border: #1a1a26;     /* Bordure sombre */
+    --text-main: #f1f5f9;        /* Blanc cassé */
+    --text-muted: #64748b;       /* Gris ardoise */
+    
+    /* Déclinaisons de Rose Cyber Néon */
+    --cyber-rose: #ff007f;       /* Rose Néon Principal */
+    --cyber-rose-dim: #99004c;   /* Rose sombre pour états inactifs */
+    --cyber-rose-glow: rgba(255, 0, 127, 0.25);
+    
+    --success-green: #10b981;    /* Vert de validation */
+}
+
+/* --- STRUCTURE GÉNÉRALE --- */
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-dark);
+    background-image: 
+        radial-gradient(at 0% 0%, rgba(255, 0, 127, 0.05) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(0, 0, 0, 0.8) 0px, transparent 50%);
+    color: var(--text-main);
+    margin: 0;
+    padding: 40px 20px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* --- EN-TÊTE --- */
+header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+h1 {
+    font-size: 2.6rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin: 0 0 10px 0;
+    color: #ffffff;
+}
+
+.glitch {
+    color: var(--cyber-rose);
+    text-shadow: 0 0 15px var(--cyber-rose);
+}
+
+header p {
+    color: var(--text-muted);
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0 0 30px 0;
+}
+
+/* --- BARRE DE PROGRESSION ROSE --- */
+.progress-box {
+    background: var(--card-bg);
+    border: 1px solid var(--panel-border);
+    border-radius: 12px;
+    padding: 20px;
+    max-width: 650px;
+    margin: 0 auto;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.6);
+}
+
+.progress-container {
+    background: #050508;
+    border-radius: 4px;
+    height: 20px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #1e1e2f;
+}
+
+.progress-bar {
+    background: linear-gradient(90deg, var(--cyber-rose-dim), var(--cyber-rose));
+    width: 0%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: 800;
+    color: #ffffff;
+    transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 0 15px var(--cyber-rose);
+}
+
+.stats {
+    margin-top: 12px;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-family: monospace;
+}
+
+/* --- CARTES CYBER SÉCURITÉ --- */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.card {
+    background: var(--card-bg);
+    border: 1px solid var(--panel-border);
+    border-radius: 12px;
+    padding: 25px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+}
+
+/* Effet de lueur et surbrillance rose au survol */
+.card:hover {
+    transform: translateY(-3px);
+    border-color: var(--cyber-rose);
+    box-shadow: 0 0 20px var(--cyber-rose-glow), 0 10px 30px rgba(0, 0, 0, 0.7);
+}
+
+.card h2 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    border-bottom: 1px dashed #1a1a26;
+    padding-bottom: 12px;
+    font-family: monospace;
+}
+
+/* Petit indicateur rose sur le côté de chaque carte */
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background: var(--cyber-rose-dim);
+    transition: background 0.3s ease;
+}
+
+.card:hover::before {
+    background: var(--cyber-rose);
+    box-shadow: 0 0 10px var(--cyber-rose);
+}
+
+/* --- LISTE INTERACTIVE --- */
+.todo-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.todo-list li {
+    background: #09090d;
+    border: 1px solid #14141f;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    padding: 12px 14px;
+    transition: all 0.2s ease;
+}
+
+.todo-list li:hover {
+    background: #11111a;
+    border-color: #26263a;
+}
+
+.todo-list label {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: #cbd5e1;
+    line-height: 1.4;
+    user-select: none;
+}
+
+/* --- CHECKBOX SÉCURISÉE ROSE NÉON --- */
+.todo-list input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #334155;
+    border-radius: 4px;
+    background: transparent;
+    cursor: pointer;
+    display: grid;
+    place-content: center;
+    margin-top: 2px;
+    flex-shrink: 0;
+    transition: all 0.2s ease;
+}
+
+.todo-list input[type="checkbox"]::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    transform: scale(0);
+    transition: 0.15s transform ease-in-out;
+    background-color: #ffffff;
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+
+.todo-list input[type="checkbox"]:checked {
+    background: var(--cyber-rose);
+    border-color: var(--cyber-rose);
+    box-shadow: 0 0 8px var(--cyber-rose);
+}
+
+.todo-list input[type="checkbox"]:checked::before {
+    transform: scale(1);
+}
+
+/* --- ÉTAT APPRÈS VALIDATION (BARRÉ) --- */
+.todo-list li.completed {
+    border-color: rgba(255, 0, 127, 0.1) !important;
+    background: rgba(255, 0, 127, 0.01) !important;
+    opacity: 0.4;
+}
+
+.todo-list li.completed label {
+    text-decoration: line-through;
+    color: var(--text-muted);
+}

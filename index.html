@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeAlpha - Cyber Pink Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1><span class="glitch">🛡️ CODEALPHA</span> CYBER LAB</h1>
+            <p>Feuille de route interactive & Suivi de progression</p>
+            
+            <div class="progress-box">
+                <div class="progress-container">
+                    <div class="progress-bar" id="globalProgressBar">0%</div>
+                </div>
+                <div class="stats" id="globalStats">0 / 0 étapes franchies</div>
+            </div>
+        </header>
+
+        <main class="grid">
+            
+            <section class="card c-instructions">
+                <h2>📝 Instructions Générales</h2>
+                <ul class="todo-list">
+                    <li><label><input type="checkbox"> Partager le statut de stagiaire sur LinkedIn (tag @CodeAlpha)</label></li>
+                    <li><label><input type="checkbox"> Créer les dépôts GitHub 'CodeAlpha_ProjectName'</label></li>
+                    <li><label><input type="checkbox"> Préparer les vidéos explicatives pour LinkedIn</label></li>
+                    <li><label><input type="checkbox"> Récupérer le lien du formulaire de soumission WhatsApp</label></li>
+                </ul>
+            </section>
+
+            <section class="card c-task1">
+                <h2>⚡ TASK 1: Basic Network Sniffer</h2>
+                <ul class="todo-list">
+                    <li><label><input type="checkbox"> Installer la bibliothèque 'scapy' ou 'socket'</label></li>
+                    <li><label><input type="checkbox"> Écrire le script Python pour capturer le trafic</label></li>
+                    <li><label><input type="checkbox"> Extraire/afficher les IPs et les protocoles</label></li>
+                    <li><label><input type="checkbox"> Afficher la charge utile (payload) des paquets</label></li>
+                    <li><label><input type="checkbox"> Tester le script avec sudo et sauvegarder les résultats</label></li>
+                </ul>
+            </section>
+
+            <section class="card c-task2">
+                <h2>🎯 TASK 2: Phishing Awareness</h2>
+                <ul class="todo-list">
+                    <li><label><input type="checkbox"> Définir le contenu théorique (détecter les faux sites)</label></li>
+                    <li><label><input type="checkbox"> Intégrer les concepts d'ingénierie sociale</label></li>
+                    <li><label><input type="checkbox"> Créer la présentation, le module ou le mini-site</label></li>
+                    <li><label><input type="checkbox"> Ajouter des exemples réels et un quiz interactif</label></li>
+                    <li><label><input type="checkbox"> Compiler les bonnes pratiques pour éviter les pièges</label></li>
+                </ul>
+            </section>
+
+            <section class="card c-task3">
+                <h2>🔍 TASK 3: Secure Coding Review</h2>
+                <ul class="todo-list">
+                    <li><label><input type="checkbox"> Sélectionner un langage et une application à auditer</label></li>
+                    <li><label><input type="checkbox"> Configurer un outil d'analyse statique (SAST) ou manuel</label></li>
+                    <li><label><input type="checkbox"> Exécuter l'audit pour identifier les vulnérabilités</label></li>
+                    <li><label><input type="checkbox"> Rédiger les recommandations et remédiations</label></li>
+                    <li><label><input type="checkbox"> Documenter les résultats dans un rapport d'audit</label></li>
+                </ul>
+            </section>
+
+            <section class="card c-task4">
+                <h2>👾 TASK 4: Network NIDS</h2>
+                <ul class="todo-list">
+                    <li><label><input type="checkbox"> Installer et configurer Snort ou Suricata</label></li>
+                    <li><label><input type="checkbox"> Écrire et injecter des règles/alertes personnalisées</label></li>
+                    <li><label><input type="checkbox"> Lancer la surveillance continue du trafic réseau</label></li>
+                    <li><label><input type="checkbox"> Simuler une attaque et valider les alertes/réponses</label></li>
+                    <li><label><input type="checkbox"> Optionnel : Configurer des graphiques de visualisation</label></li>
+                </ul>
+            </section>
+
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
