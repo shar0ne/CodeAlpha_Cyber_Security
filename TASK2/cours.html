@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phishing Awareness | Course Lab</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="logo">Cyber<span>Alpha</span></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cours.html" class="active">Interactive Course</a></li>
+                <li><a href="quiz.html">Test Your Reflexes</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="cours-section">
+        <h2>Phishing Awareness Module</h2>
+        
+        <div class="course-card">
+            <h3>💡 What is Phishing?</h3>
+            <p>Phishing is a cyber attack technique where criminals masquerade as trustworthy entities to trick you into revealing sensitive data like passwords or banking details. They rely heavily on <strong>Social Engineering</strong>—manipulating human psychology through fear, reward, or urgency.</p>
+            <p><strong>Key Indicators to Watch For:</strong></p>
+            <ul>
+                <li>🚨 <strong>Spoofed Domains:</strong> Look closely at sender addresses; attackers mimic official brands using free or slightly misspelled domains.</li>
+                <li>⏳ <strong>Artificial Urgency:</strong> Demands for immediate payment or warnings about compromised tokens are designed to make you act without thinking.</li>
+                <li>💸 <strong>Advance Fee Scams:</strong> Legitimate financial networks won't ask for a deposit to clear pending assets.</li>
+            </ul>
+        </div>
+
+        <h2>Technical Breakdown Lab</h2>
+        <p style="color: var(--text-gray); margin-bottom: 35px;">Click on the interactive blue indicators to explore hidden threat vectors.</p>
+
+        <div class="educational-badge">⚠️ For Educational Purposes Only</div>
+        <div class="email-title">Case 1: Fake Credential & Token Notification</div>
+        <div class="email-analysis-container">
+            <img src="assets/images/Capture d’écran du 2026-06-23 17-50-44.png" alt="Phishing Sample Token" class="email-img">
+            
+            <div class="hotspot" style="top: 22%; left: 16%;">
+                <div class="pulse-ring"></div>
+                <div class="tooltip">
+                    <strong>🚨 Fraudulent Sender Address</strong>
+                    An official entity like Trust Wallet uses dedicated web domains. Relying on a free `@gmail.com` address containing the typo "mangement" is absolute proof of a scam.
+                </div>
+            </div>
+
+            <div class="hotspot" style="top: 52%; left: 18%;">
+                <div class="pulse-ring"></div>
+                <div class="tooltip">
+                    <strong>❌ Confidential Data Exposure</strong>
+                    Legitimate services never transmit plaintext passwords or critical cryptographic seeds directly in the body of an unencrypted email.
+                </div>
+            </div>
+        </div>
+
+        <div class="educational-badge">⚠️ For Educational Purposes Only</div>
+        <div class="email-title">Case 2: Financial Bait & Advance Fee Scams</div>
+        <div class="email-analysis-container">
+            <img src="assets/images/Capture d’écran du 2026-06-23 17-36-38.png" alt="Phishing Sample Advance Fee" class="email-img">
+            
+            <div class="hotspot" style="top: 52%; left: 32%;">
+                <div class="pulse-ring"></div>
+                <div class="tooltip">
+                    <strong>💰 Psychological Engineering</strong>
+                    The attacker baits the target with a huge transaction (11 Million) to induce excitement. Notice the geographic currency clash: XAF (Central Africa) used alongside local Western African mobile telecom networks (MTN/XOF).
+                </div>
+            </div>
+
+            <div class="hotspot" style="top: 68%; left: 38%;">
+                <div class="pulse-ring"></div>
+                <div class="tooltip">
+                    <strong>🛑 Advance Fee Trap</strong>
+                    The requirement to forward immediate processing fees (54,100 XOF) to receive a non-existent larger payout is a baseline fingerprint for financial extortion.
+                </div>
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 60px; margin-bottom: 40px;">
+            <a href="quiz.html" class="btn-primary">Next: Test Your Reflexes Now ➔</a>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        CodeAlpha Cyber Security Internship Project
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

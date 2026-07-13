@@ -1,0 +1,4 @@
+matplotlib>=3.8.0
+# Optionnel pour une capture réseau LIVE réelle (nécessite les droits root/administrateur
+# et libpcap installé sur la machine) :
+# scapy>=2.5.0

@@ -1,0 +1,42 @@
+{
+  "port_scan": {
+    "enabled": true,
+    "description": "Détecte une même IP source contactant un grand nombre de ports différents en peu de temps",
+    "distinct_ports_threshold": 20,
+    "window_seconds": 10,
+    "severity": "HIGH"
+  },
+  "icmp_flood": {
+    "enabled": true,
+    "description": "Détecte un nombre anormal de paquets ICMP provenant d'une même IP source",
+    "packet_count_threshold": 50,
+    "window_seconds": 5,
+    "severity": "MEDIUM"
+  },
+  "bruteforce_login": {
+    "enabled": true,
+    "description": "Détecte des tentatives répétées de connexion (POST /login) depuis une même IP",
+    "attempt_threshold": 8,
+    "window_seconds": 15,
+    "target_port": 80,
+    "severity": "HIGH"
+  },
+  "payload_signatures": {
+    "enabled": true,
+    "description": "Détecte des motifs connus d'attaque applicative dans le payload",
+    "severity": "CRITICAL",
+    "signatures": [
+      {"name": "SQL_INJECTION", "pattern": "('\\s*OR\\s*'|UNION\\s+SELECT|--\\s|;\\s*DROP\\s+TABLE)", "flags": "i"},
+      {"name": "XSS", "pattern": "<script.*?>|onerror\\s*=|javascript:", "flags": "i"},
+      {"name": "PATH_TRAVERSAL", "pattern": "(\\.\\./){2,}|etc/passwd", "flags": "i"},
+      {"name": "WEBSHELL_UPLOAD", "pattern": "filename=.*\\.(php|jsp|asp)x?", "flags": "i"}
+    ]
+  },
+  "blacklisted_ips": {
+    "enabled": true,
+    "description": "IP connues comme malveillantes (threat intel statique de démonstration)",
+    "severity": "CRITICAL",
+    "cooldown_seconds": 30,
+    "ip_list": ["45.83.12.7", "185.220.101.4"]
+  }
+}

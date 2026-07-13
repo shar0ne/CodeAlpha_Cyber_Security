@@ -1,0 +1,26 @@
+timestamp,type,severity,src_ip,dst_ip,description
+2026-07-09T10:03:20,BLACKLISTED_IP,CRITICAL,45.83.12.7,192.168.1.100,Trafic provenant d'une IP source blacklistée (45.83.12.7)
+2026-07-09T10:03:20.380000,PORT_SCAN,HIGH,45.83.12.7,192.168.1.100,20 ports distincts contactés par 45.83.12.7 en moins de 10s (seuil: 20)
+2026-07-09T10:03:20.780000,PORT_SCAN,HIGH,45.83.12.7,192.168.1.100,20 ports distincts contactés par 45.83.12.7 en moins de 10s (seuil: 20)
+2026-07-09T10:03:21.180000,PORT_SCAN,HIGH,45.83.12.7,192.168.1.100,20 ports distincts contactés par 45.83.12.7 en moins de 10s (seuil: 20)
+2026-07-09T10:03:21.580000,PORT_SCAN,HIGH,45.83.12.7,192.168.1.100,20 ports distincts contactés par 45.83.12.7 en moins de 10s (seuil: 20)
+2026-07-09T10:03:21.980000,PORT_SCAN,HIGH,45.83.12.7,192.168.1.100,20 ports distincts contactés par 45.83.12.7 en moins de 10s (seuil: 20)
+2026-07-09T10:03:22.380000,PORT_SCAN,HIGH,45.83.12.7,192.168.1.100,20 ports distincts contactés par 45.83.12.7 en moins de 10s (seuil: 20)
+2026-07-09T10:03:22.780000,PORT_SCAN,HIGH,45.83.12.7,192.168.1.100,20 ports distincts contactés par 45.83.12.7 en moins de 10s (seuil: 20)
+2026-07-09T10:04:20,BLACKLISTED_IP,CRITICAL,45.83.12.7,192.168.1.100,Trafic provenant d'une IP source blacklistée (45.83.12.7)
+2026-07-09T10:04:20.490000,ICMP_FLOOD,MEDIUM,45.83.12.7,192.168.1.100,50 paquets ICMP reçus de 45.83.12.7 en moins de 5s (seuil: 50)
+2026-07-09T10:04:20.990000,ICMP_FLOOD,MEDIUM,45.83.12.7,192.168.1.100,50 paquets ICMP reçus de 45.83.12.7 en moins de 5s (seuil: 50)
+2026-07-09T10:04:21.490000,ICMP_FLOOD,MEDIUM,45.83.12.7,192.168.1.100,50 paquets ICMP reçus de 45.83.12.7 en moins de 5s (seuil: 50)
+2026-07-09T10:04:21.990000,ICMP_FLOOD,MEDIUM,45.83.12.7,192.168.1.100,50 paquets ICMP reçus de 45.83.12.7 en moins de 5s (seuil: 50)
+2026-07-09T10:04:22.490000,ICMP_FLOOD,MEDIUM,45.83.12.7,192.168.1.100,50 paquets ICMP reçus de 45.83.12.7 en moins de 5s (seuil: 50)
+2026-07-09T10:04:22.990000,ICMP_FLOOD,MEDIUM,45.83.12.7,192.168.1.100,50 paquets ICMP reçus de 45.83.12.7 en moins de 5s (seuil: 50)
+2026-07-09T10:05:20,BLACKLISTED_IP,CRITICAL,185.220.101.4,192.168.1.100,Trafic provenant d'une IP source blacklistée (185.220.101.4)
+2026-07-09T10:05:22.100000,BRUTEFORCE_LOGIN,HIGH,185.220.101.4,192.168.1.100,8 tentatives de connexion depuis 185.220.101.4 en moins de 15s (seuil: 8)
+2026-07-09T10:05:24.500000,BRUTEFORCE_LOGIN,HIGH,185.220.101.4,192.168.1.100,8 tentatives de connexion depuis 185.220.101.4 en moins de 15s (seuil: 8)
+2026-07-09T10:05:26.900000,BRUTEFORCE_LOGIN,HIGH,185.220.101.4,192.168.1.100,8 tentatives de connexion depuis 185.220.101.4 en moins de 15s (seuil: 8)
+2026-07-09T10:07:00,BLACKLISTED_IP,CRITICAL,45.83.12.7,192.168.1.100,Trafic provenant d'une IP source blacklistée (45.83.12.7)
+2026-07-09T10:07:00,SIGNATURE_SQL_INJECTION,CRITICAL,45.83.12.7,192.168.1.100,Signature 'SQL_INJECTION' détectée dans le payload : GET /product?id=1' OR '1'='1 HTTP/1.1
+2026-07-09T10:07:05,SIGNATURE_XSS,CRITICAL,45.83.12.7,192.168.1.100,Signature 'XSS' détectée dans le payload : GET /search?q=<script>alert(document.cookie)</script> HTTP/1.1
+2026-07-09T10:07:10,SIGNATURE_SQL_INJECTION,CRITICAL,45.83.12.7,192.168.1.100,"Signature 'SQL_INJECTION' détectée dans le payload : GET /users?id=1 UNION SELECT username,password FROM users-- HTTP/1.1"
+2026-07-09T10:07:15,SIGNATURE_PATH_TRAVERSAL,CRITICAL,45.83.12.7,192.168.1.100,Signature 'PATH_TRAVERSAL' détectée dans le payload : GET /file?path=../../../../etc/passwd HTTP/1.1
+2026-07-09T10:07:20,SIGNATURE_WEBSHELL_UPLOAD,CRITICAL,45.83.12.7,192.168.1.100,Signature 'WEBSHELL_UPLOAD' détectée dans le payload : POST /upload HTTP/1.1 filename=shell.php

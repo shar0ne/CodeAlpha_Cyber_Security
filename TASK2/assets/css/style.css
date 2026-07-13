@@ -1,0 +1,360 @@
+
+:root {
+    --bg-dark: #08080c;
+    --bg-card: #111118;
+    --blue-royal: #4169e1;
+    --blue-hover: #5a7ff5;
+    --blue-light: rgba(65, 105, 225, 0.1);
+    --text-white: #ffffff;
+    --text-gray: #a9a9b3;
+    --border-subtle: #1f1f2e;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-white);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-size: 20px; /* Écriture grande et très lisible */
+}
+
+main {
+    flex: 1;
+    width: 100%;
+}
+
+/* --- NAVBAR MINIMALISTE ET HORIZONTALE --- */
+.main-header {
+    background-color: rgba(8, 8, 12, 0.95);
+    border-bottom: 1px solid var(--border-subtle);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 25px 20px;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--text-white);
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: var(--blue-royal);
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 35px;
+}
+
+.nav-links a {
+    color: var(--text-gray);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 18px;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--blue-royal);
+}
+
+/* --- BOUTONS NATURELS --- */
+.btn-primary {
+    display: inline-block;
+    background-color: var(--blue-royal);
+    color: var(--text-white);
+    padding: 14px 32px;
+    border-radius: 30px; /* Arrondi plus fluide et moderne */
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: var(--blue-hover);
+}
+
+.btn-primary:active {
+    transform: scale(0.98);
+}
+
+/* --- HERO (ACCUEIL) --- */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+    gap: 60px;
+}
+
+.hero-content {
+    flex: 1.2;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    letter-spacing: -1px;
+}
+
+.hero-content h1 span {
+    color: var(--blue-royal);
+}
+
+.hero-content p {
+    color: var(--text-gray);
+    font-size: 22px;
+    margin-bottom: 35px;
+}
+
+.hero-image {
+    flex: 0.8;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 16px;
+    border: 1px solid var(--border-subtle);
+}
+
+/* --- SECTION COURS INTERACTIF --- */
+.cours-section {
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.cours-section h2 {
+    font-size: 38px;
+    font-weight: 700;
+    margin-bottom: 35px;
+    letter-spacing: -0.5px;
+}
+
+.course-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 16px;
+    padding: 35px;
+    margin-bottom: 50px;
+}
+
+.course-card h3 {
+    color: var(--blue-royal);
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.course-card ul {
+    margin-left: 20px;
+    margin-top: 15px;
+}
+
+.course-card li {
+    margin-bottom: 12px;
+    color: var(--text-gray);
+}
+
+.course-card strong {
+    color: var(--text-white);
+}
+
+.educational-badge {
+    display: inline-block;
+    background-color: var(--blue-light);
+    color: var(--blue-royal);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-bottom: 15px;
+}
+
+.email-title {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+/* --- COMPOSANT D'ANALYSE D'IMAGE --- */
+.email-analysis-container {
+    position: relative;
+    width: 100%;
+    margin-bottom: 60px;
+    border: 1px solid var(--border-subtle);
+    border-radius: 12px;
+    background-color: #000;
+}
+
+.email-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 11px;
+}
+
+/* Points d'interaction (Hotspots) */
+.hotspot {
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.pulse-ring {
+    width: 100%;
+    height: 100%;
+    background: var(--blue-royal);
+    border-radius: 50%;
+    animation: pulse-animation 2.5s infinite;
+}
+
+@keyframes pulse-animation {
+    0% { box-shadow: 0 0 0 0 rgba(65, 105, 225, 0.6); }
+    70% { box-shadow: 0 0 0 12px rgba(65, 105, 225, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(65, 105, 225, 0); }
+}
+
+/* Info-bulles ultra-naturelles */
+.tooltip {
+    position: absolute;
+    bottom: 38px;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    width: 310px;
+    background: #161622;
+    color: var(--text-white);
+    padding: 18px;
+    border-radius: 12px;
+    border: 1px solid var(--border-subtle);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+    font-size: 16px;
+    line-height: 1.5;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
+}
+
+.tooltip strong {
+    color: var(--blue-royal);
+    display: block;
+    margin-bottom: 5px;
+    font-size: 17px;
+}
+
+/* Déclencheurs fluides (PC & Mobile) */
+.hotspot:hover .tooltip,
+.hotspot.active .tooltip {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* --- ZONE QUIZ --- */
+.quiz-container {
+    max-width: 750px;
+    margin: 60px auto;
+    background-color: var(--bg-card);
+    padding: 45px;
+    border-radius: 16px;
+    border: 1px solid var(--border-subtle);
+}
+
+.quiz-container h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.options-list {
+    list-style: none;
+    margin: 30px 0;
+}
+
+.option-item {
+    background: #14141f;
+    padding: 18px 22px;
+    margin-bottom: 14px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    font-size: 18px;
+    color: var(--text-gray);
+    transition: all 0.2s ease;
+}
+
+.option-item:hover {
+    border-color: var(--blue-royal);
+    color: var(--text-white);
+    background: #191926;
+}
+
+/* --- FOOTER UNIFIÉ --- */
+.main-footer {
+    background-color: var(--bg-dark);
+    border-top: 1px solid var(--border-subtle);
+    text-align: center;
+    padding: 30px;
+    color: var(--text-gray);
+    font-size: 15px;
+    margin-top: auto;
+}
+
+/* --- DEVIENT FLUIDE SUR SPHONE & TABLETTE --- */
+@media (max-width: 960px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        margin: 30px auto;
+        gap: 40px;
+    }
+    .hero-content h1 {
+        font-size: 38px;
+    }
+    .hero-content p {
+        font-size: 19px;
+    }
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .tooltip {
+        width: 260px;
+    }
+}
